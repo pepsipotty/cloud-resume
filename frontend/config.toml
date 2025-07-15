@@ -1,0 +1,10 @@
+baseURL = "https://sengwei-yeoh.com/"
+languageCode = "en-us"
+title = "Sengwei Yeoh - Resume"
+theme = ""  # Custom
+
+[params]
+  description = "Sengwei Yeoh - Professional Resume & Portfolio"
+
+[markup]
+  goldmark.renderer.unsafe = true  # Allow raw HTML if needed 
