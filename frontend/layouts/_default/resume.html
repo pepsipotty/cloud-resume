@@ -1,0 +1,74 @@
+{{ define "main" }}
+    <div class="resume-container">
+        <!-- first card, should be main and pop to grab attention -->
+        <div class="resume-card header-card">
+            <div class="text-center">
+                <h1 class="name-title">Sengwei Yeoh</h1>
+                <p class="job-title">Software Engineer | DevOps Engineer</p>
+                <div class="contact-info">
+                    <span>sengweiyeoh@gmail.com</span>
+                    <span class="divider">•</span>
+                    <span>(614) 207 6960</span>
+                    <span class="divider">•</span>
+                    <span>Columbus, OH</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- professional summary. Tbd if i want to keep this -->
+        <div class="resume-card">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">{{ .Params.summary | markdownify }}</p>
+        </div>
+
+        <!-- work experience -->
+        <div class="resume-card">
+            <h2 class="section-title">Work Experience</h2>
+            {{ range .Params.experience }}
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="position-title">{{ .title }}</h3>
+                    <p class="company-info">{{ .company }} | {{ .period }}</p>
+                </div>
+                <ul class="achievement-list">
+                    {{ range .achievements }}
+                    <li class="achievement-item">{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Education -->
+        <div class="resume-card">
+            <h2 class="section-title">Education</h2>
+            {{ range .Params.education }}
+            <div class="education-item">
+                <h3 class="degree-title">{{ .degree }}</h3>
+                <p class="institution-info">{{ .institution }} | {{ .period }}</p>
+                <p class="education-details">{{ .details }}</p>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Skills -->
+        <div class="resume-card">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                {{ range .Params.skills }}
+                <span class="skill-tag">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- Certifications-->
+        <div class="resume-card">
+            <h2 class="section-title">Certifications</h2>
+            <ul class="certification-list">
+                {{ range .Params.certifications }}
+                <li class="certification-item">{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+{{ end }}

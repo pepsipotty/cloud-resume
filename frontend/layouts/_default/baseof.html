@@ -1,0 +1,101 @@
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/css/consolidated.css" | relURL }}">
+</head>
+<body>
+    {{ partial "nav.html" . }}
+    
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+
+    {{ partial "footer.html" . }}
+
+    <script>
+
+        // Typewriter effect for hero section
+        // This function initializes the typewriter effect for the hero section
+        function initTypewriter() {
+            const typewriterElement = document.getElementById('typewriter');
+            if (!typewriterElement) return;
+
+            const phrases = [
+                'Cloud Engineer',
+                'Software Developer', 
+                'DevOps Specialist',
+                'Tech Innovator',
+                'Team Leader'
+            ];
+
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let currentPhrase = '';
+
+            function type() {
+                currentPhrase = phrases[phraseIndex];
+                
+                if (isDeleting) {
+                    typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 50 : 100;
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+
+            type();
+        }
+
+
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initTypewriter();
+            
+            // add click animations to card stats
+            const statCards = document.querySelectorAll('.card--stat');
+            statCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // Smooth scrolling for scroll indicator
+            const scrollIndicator = document.querySelector('.hero__scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    const recommendationsSection = document.querySelector('.recommendations-section');
+                    if (recommendationsSection) {
+                        recommendationsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+                scrollIndicator.style.cursor = 'pointer';
+            }
+        });
+    </script>
+</body>
+</html> 
