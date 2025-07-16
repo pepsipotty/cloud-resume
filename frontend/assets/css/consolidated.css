@@ -621,6 +621,14 @@ button {
   border-bottom: 1px solid var(--border-primary);
 }
 
+.footer__main-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
 .footer__tech-list {
   list-style: none;
   padding: 0;
