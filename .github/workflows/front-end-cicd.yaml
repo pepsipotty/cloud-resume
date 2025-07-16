@@ -25,23 +25,20 @@ jobs:
       - name: Build Hugo site
         run: cd frontend && hugo --minify
 
-      - name: Sync to S3 (no ACLs)
-        uses: aws-actions/aws-s3-sync@v2
+      - uses: jakejarvis/s3-sync-action@master
         with:
-          source_dir: 'frontend/public'
-          dest_bucket: ${{ secrets.S3_BUCKET }}
-          dest_region: ${{ secrets.S3_BUCKET_REGION }}
-          delete: true
+          args: --follow-symlinks --delete
         env:
+          AWS_S3_BUCKET: ${{ secrets.S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: 'frontend/public'  
 
-      - name: Invalidate CloudFront cache
-        uses: aws-actions/aws-cloudfront-invalidate@v1
-        with:
-          distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          paths: '/*'
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
         env:
+          PATHS: '/*'
+          AWS_REGION: 'us-east-1'
+          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
