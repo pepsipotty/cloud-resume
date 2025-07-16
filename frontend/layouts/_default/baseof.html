@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="{{ "/css/consolidated.css" | relURL }}">
 </head>
 <body>
+    <div id="tsparticles"></div>
     {{ partial "nav.html" . }}
     
     <main class="main-content">
@@ -18,6 +20,22 @@
 
     {{ partial "footer.html" . }}
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    
+    <!-- Particles initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof tsParticles !== 'undefined') {
+                fetch('/js/particles-config.json')
+                    .then(response => response.json())
+                    .then(config => {
+                        tsParticles.load("tsparticles", config);
+                    })
+                    .catch(error => console.error('particle load fail!', error));
+            }
+        });
+    </script>
+    
     <script>
 
         // Typewriter effect for hero section
