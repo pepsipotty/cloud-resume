@@ -4,7 +4,7 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-    "build-css": "npx postcss ./assets/css/main.css -o ./static/css/main.css"
+    "build-css": "npx postcss ./assets/css/consolidated.css -o ./static/css/consolidated.css"
   },
   "keywords": [],
   "author": "",
