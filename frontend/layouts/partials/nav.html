@@ -6,16 +6,19 @@
         <div class="nav__right">
             <ul class="nav__menu" role="menubar">
                 <li class="nav__item" role="none">
-                    <a href="{{ "/" | relURL }}" class="nav__link" role="menuitem" aria-label="Go to home page">Home</a>
+                    <a href="{{ "/" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/" }} nav__link--active{{ end }}" role="menuitem" aria-label="Go to home page">Home</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/resume" | relURL }}" class="nav__link" role="menuitem" aria-label="View resume">Resume</a>
+                    <a href="{{ "/resume" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/resume/" }} nav__link--active{{ end }}" role="menuitem" aria-label="View resume">Resume</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/about" | relURL }}" class="nav__link" role="menuitem" aria-label="Learn about me">About</a>
+                    <a href="{{ "/teaching" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/teaching/" }} nav__link--active{{ end }}" role="menuitem" aria-label="View teaching experience">Teaching</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/contact" | relURL }}" class="nav__link" role="menuitem" aria-label="Contact information">Contact</a>
+                    <a href="{{ "/about" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/about/" }} nav__link--active{{ end }}" role="menuitem" aria-label="Learn about me">About</a>
+                </li>
+                <li class="nav__item" role="none">
+                    <a href="{{ "/contact" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/contact/" }} nav__link--active{{ end }}" role="menuitem" aria-label="Contact information">Contact</a>
                 </li>
             </ul>
         </div>
