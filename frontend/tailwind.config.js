@@ -5,7 +5,24 @@ module.exports = {
     './public/**/*.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        'bg-nav': 'var(--bg-nav)',
+        'bg-card': 'var(--bg-card)',
+      },
+      fontFamily: {
+        body: [
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'sans-serif',
+        ],
+        accent: ['Dancing Script', 'cursive'],
+      },
+    },
   },
   plugins: [],
 } 

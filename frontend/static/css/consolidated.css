@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap"');
+/* Font imports */
 
 @tailwind base;
 @tailwind components;
@@ -25,6 +25,10 @@
   --text-nav-hover: #ffffff;
   --text-brand: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
   --text-hero: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+
+  /* Font families */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-accent: 'Dancing Script', cursive;
   
   --border-primary: rgba(148, 163, 184, 0.1);
   --border-hover: rgba(148, 163, 184, 0.2);
@@ -85,7 +89,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   background: var(--bg-primary);
   min-height: 100vh;
   margin: 0;
@@ -154,7 +158,7 @@ button {
   font-size: var(--font-size-3xl);
   font-weight: 700;
   text-decoration: none;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-accent);
   background: linear-gradient(135deg, #00ff88 0%, #00ccff 35%, #cc88ff 85%, #ff88cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -316,7 +320,7 @@ button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-accent);
   font-weight: 600;
   font-size: calc(var(--font-size-5xl) + 2rem);
   line-height: 1.2;
@@ -843,7 +847,7 @@ button {
 }
 
 .section-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   font-size: var(--font-size-2xl);
   font-weight: 500;
   color: var(--text-primary);
@@ -1379,7 +1383,7 @@ button {
 .page-title {
   font-size: 4.5rem;
   font-weight: 400;
-  font-family: 'Knewave', 'Georgia', serif;
+  font-family: var(--font-accent);
   color: #e2e8f0;
   letter-spacing: 0.05em;
   margin: 0;
@@ -2080,7 +2084,7 @@ button {
 }
 
 .blog-title {
-  font-family: 'Knewave', cursive;
+  font-family: var(--font-accent);
   font-size: var(--font-size-3xl);
   background: var(--text-hero);
   background-clip: text;
