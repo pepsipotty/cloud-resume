@@ -1,24 +1,43 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__container">
         <div class="nav__brand">
-            <a href="{{ "/" | relURL }}" class="nav__brand" aria-label="Sengwei Yeoh - Home">Sengwei</a>
+            <a href="{{ "/" | relURL }}" class="nav__brand-link">Sengwei</a>
         </div>
         <div class="nav__right">
             <ul class="nav__menu" role="menubar">
                 <li class="nav__item" role="none">
-                    <a href="{{ "/" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/" }} nav__link--active{{ end }}" role="menuitem" aria-label="Go to home page">Home</a>
+                    <a href="{{ "/" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/" }} nav__link--active{{ end }}" role="menuitem">Home</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/resume" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/resume/" }} nav__link--active{{ end }}" role="menuitem" aria-label="View resume">Resume</a>
+                    <a href="{{ "/resume" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/resume/" }} nav__link--active{{ end }}" role="menuitem">Resume</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/teaching" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/teaching/" }} nav__link--active{{ end }}" role="menuitem" aria-label="View teaching experience">Teaching</a>
+                    <a href="{{ "/teaching" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/teaching/" }} nav__link--active{{ end }}" role="menuitem">Teaching</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/blog" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/blog/" }} nav__link--active{{ end }}" role="menuitem" aria-label="Read blog posts">Blog</a>
+                    <a href="{{ "/blog" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/blog/" }} nav__link--active{{ end }}" role="menuitem">Blog</a>
                 </li>
                 <li class="nav__item" role="none">
-                    <a href="{{ "/contact" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/contact/" }} nav__link--active{{ end }}" role="menuitem" aria-label="Contact information">Contact</a>
+                    <a href="{{ "/contact" | relURL }}" class="nav__link{{ if eq .Page.RelPermalink "/contact/" }} nav__link--active{{ end }}" role="menuitem">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav__dropdown">
+            <ul class="nav__dropdown-menu" role="menu">
+                <li class="nav__dropdown-item">
+                    <a href="{{ "/" | relURL }}" class="nav__dropdown-link{{ if eq .Page.RelPermalink "/" }} nav__dropdown-link--active{{ end }}">Home</a>
+                </li>
+                <li class="nav__dropdown-item">
+                    <a href="{{ "/resume" | relURL }}" class="nav__dropdown-link{{ if eq .Page.RelPermalink "/resume/" }} nav__dropdown-link--active{{ end }}">Resume</a>
+                </li>
+                <li class="nav__dropdown-item">
+                    <a href="{{ "/teaching" | relURL }}" class="nav__dropdown-link{{ if eq .Page.RelPermalink "/teaching/" }} nav__dropdown-link--active{{ end }}">Teaching</a>
+                </li>
+                <li class="nav__dropdown-item">
+                    <a href="{{ "/blog" | relURL }}" class="nav__dropdown-link{{ if eq .Page.RelPermalink "/blog/" }} nav__dropdown-link--active{{ end }}">Blog</a>
+                </li>
+                <li class="nav__dropdown-item">
+                    <a href="{{ "/contact" | relURL }}" class="nav__dropdown-link{{ if eq .Page.RelPermalink "/contact/" }} nav__dropdown-link--active{{ end }}">Contact</a>
                 </li>
             </ul>
         </div>

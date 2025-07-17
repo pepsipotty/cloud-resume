@@ -92,9 +92,65 @@
 
 
 
+        // Mobile navigation dropdown functionality
+        function initMobileNav() {
+            const dropdown = document.querySelector('.nav__dropdown');
+            
+            if (!dropdown) return;
+            
+            // Check if we're in mobile portrait mode
+            function isMobilePortrait() {
+                return window.innerWidth <= 768 && window.innerHeight > window.innerWidth;
+            }
+            
+            // Toggle dropdown function
+            function toggleDropdown() {
+                if (!isMobilePortrait()) return;
+                
+                const isActive = dropdown.classList.contains('nav__dropdown--active');
+                dropdown.classList.toggle('nav__dropdown--active', !isActive);
+            }
+            
+            // Close dropdown
+            function closeDropdown() {
+                dropdown.classList.remove('nav__dropdown--active');
+            }
+            
+            // Event listeners using event delegation
+            document.addEventListener('click', function(e) {
+                // Check if the clicked element is the brand link
+                if (e.target.matches('.nav__brand-link') || e.target.closest('.nav__brand-link')) {
+                    if (isMobilePortrait()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleDropdown();
+                        return false;
+                    }
+                }
+                // Close dropdown when clicking outside
+                else if (!e.target.closest('.nav__brand') && !e.target.closest('.nav__dropdown')) {
+                    closeDropdown();
+                }
+            });
+            
+            // Close dropdown when window is resized out of mobile portrait
+            window.addEventListener('resize', function() {
+                if (!isMobilePortrait()) {
+                    closeDropdown();
+                }
+            });
+            
+            // Close dropdown when a nav link is clicked
+            const dropdownLinks = document.querySelectorAll('.nav__dropdown-link');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', closeDropdown);
+            });
+        }
+
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             initTypewriter();
+            initMobileNav();
             
             // add click animations to card stats
             const statCards = document.querySelectorAll('.card--stat');
