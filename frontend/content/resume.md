@@ -17,7 +17,18 @@ experience:
       - "Developed machine learning models for analyzing large-scale data sets."
       - "Published research findings in peer-reviewed conferences and journals."
       - "Utilized Python and C++ to implement algorithms and optimize performance."
+  - title: "Research Assistant"
+    company: "The Ohio State University"
+    period: "2021 - 2023"
+    achievements:
+      - "Developed machine learning models for analyzing large-scale data sets."
+      - "Published research findings in peer-reviewed conferences and journals."
+      - "Utilized Python and C++ to implement algorithms and optimize performance."
 education:
+  - degree: "Bachelor of Science in Computer Science"
+    institution: "The Ohio State University"
+    period: "Graduated 2023"
+    details: "GPA: 3.75/4.00; Dean's List; Relevant coursework: Data Structures, Algorithms, Machine Learning."
   - degree: "Bachelor of Science in Computer Science"
     institution: "The Ohio State University"
     period: "Graduated 2023"
