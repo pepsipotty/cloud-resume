@@ -3,6 +3,6 @@ languageCode = 'en-us'
 title = 'sengweiyeoh.com'
 
 [taxonomies]
-  # Disable default taxonomies
-  tag = ""
-  category = ""
+  # Enable taxonomies for blog
+  tag = "tags"
+  category = "categories"
