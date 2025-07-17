@@ -7,3 +7,8 @@ frontend/.hugo_build.lock
 .vscode/
 *.log
 tmp/
+terraform.tfstate.backup
+terraform.tfstate
+.terraform.lock.hcl
+LICENSE.txt
+terraform-provider-aws_v6.3.0_x5
