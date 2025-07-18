@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap"');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Ubuntu+Mono:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -43,6 +43,7 @@
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
+  --spacing-2xl: 6rem;
   
   /* Typography Scale */
   --font-size-xs: 0.75rem;
@@ -54,6 +55,27 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
+
+  /* Font Families */
+  --font-brand: 'Dancing Script', cursive;
+  --font-primary: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', 'Monaco', 'Menlo', monospace;
+  
+  /* Semantic Font Aliases */
+  --font-logo: var(--font-brand);
+  --font-heading: var(--font-primary);
+  --font-body: var(--font-primary);
+  --font-nav: var(--font-primary);
+  --font-code: var(--font-mono);
+  --font-typewriter: 'Ubuntu Mono', 'Fira Code', 'Source Code Pro', var(--font-mono);
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
   
   /* Border Radius */
   --radius-sm: 0.125rem;
@@ -85,7 +107,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   background: var(--bg-primary);
   min-height: 100vh;
   margin: 0;
@@ -99,7 +121,7 @@ body {
 /* basic text styles */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 1.2;
   color: var(--text-primary);
 }
@@ -152,9 +174,9 @@ button {
 
 .nav__brand-link {
   font-size: var(--font-size-3xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-logo);
   background: linear-gradient(135deg, #00ff88 0%, #00ccff 35%, #cc88ff 85%, #ff88cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -192,7 +214,7 @@ button {
 .nav__link {
   color: var(--text-nav);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
   letter-spacing: 0.5px;
   transition: all var(--transition-base);
@@ -216,7 +238,7 @@ button {
   color: rgba(0, 255, 136, 0.6);
   background: rgba(148, 163, 184, 0.08);
   border-color: rgba(148, 163, 184, 0.15);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .nav__link--active:hover {
@@ -228,10 +250,11 @@ button {
 
 /* hero section and components */
 .hero {
-  padding: var(--spacing-lg);
+  padding: calc(var(--spacing-xl) + var(--spacing-lg)) var(--spacing-lg) var(--spacing-lg);
   text-align: center;
   position: relative;
-  min-height: 100vh;
+  min-height: 85vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,8 +269,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 .hero__profile-image {
@@ -286,7 +309,7 @@ button {
 .hero__profile-initials {
   display: none;
   font-size: var(--font-size-4xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
 }
 
@@ -296,8 +319,8 @@ button {
 
 .hero__title {
   font-size: var(--font-size-5xl);
-  font-weight: 800;
-  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-extrabold);
+  margin-bottom: var(--spacing-sm);
   line-height: 1.1;
 }
 
@@ -305,7 +328,7 @@ button {
   display: block;
   color: var(--text-secondary);
   font-size: var(--font-size-3xl);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -316,11 +339,11 @@ button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 600;
+  font-family: var(--font-logo);
+  font-weight: var(--font-weight-semibold);
   font-size: calc(var(--font-size-5xl) + 2rem);
   line-height: 1.2;
-  margin-top: var(--spacing-sm);
+  margin-top: 0;
   transform: rotate(-1deg);
   filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.4));
   transition: all var(--transition-base);
@@ -332,6 +355,7 @@ button {
   filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.6)) drop-shadow(0 0 15px rgba(255, 136, 204, 0.3));
 }
 
+
 .hero__typewriter {
   height: 80px;
   display: flex;
@@ -339,28 +363,31 @@ button {
   justify-content: center;
   font-size: var(--font-size-2xl);
   color: var(--text-body);
-  margin-bottom: var(--spacing-lg);
 }
 
 .hero__typewriter-text {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-typewriter);
 }
 
 .hero__typewriter-cursor {
-  animation: blink 1s infinite;
-  font-weight: 100;
+  animation: blink 4s infinite;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
+  font-size: 1em;
+  transform: scaleX(1.1) scaleY(1.3);
+  display: inline-block;
 }
 
 .hero__scroll-indicator {
   position: absolute;
-  bottom: var(--spacing-lg);
+  bottom: calc(-1 * var(--spacing-xl));
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: var(--text-muted);
   animation: fadeInOut 3s infinite;
-  z-index: 5;
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -412,14 +439,14 @@ button {
 
 .stat-card__number {
   font-size: calc(var(--font-size-4xl) - 0.25rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
 }
 
 .stat-card__label {
   color: var(--text-body);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: var(--font-size-base);
 }
 
@@ -440,7 +467,7 @@ button {
   position: absolute;
   top: var(--spacing-md);
   left: var(--spacing-lg);
-  font-family: Georgia, serif;
+  font-family: var(--font-body);
 }
 
 .recommendation-card__text {
@@ -461,7 +488,7 @@ button {
 
 .recommendation-card__name {
   font-size: var(--font-size-2xl);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
 }
@@ -469,7 +496,7 @@ button {
 .recommendation-card__title {
   font-size: var(--font-size-base);
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 /* grid layouts for cards */
@@ -481,7 +508,7 @@ button {
 .card-grid--stats {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   max-width: 800px;
-  margin: var(--spacing-xl) auto;
+  margin: var(--spacing-lg) auto;
 }
 
 .card-grid--recommendations {
@@ -496,7 +523,7 @@ button {
   gap: var(--spacing-sm);
   padding: calc(var(--spacing-md) + var(--spacing-xs)) calc(var(--spacing-lg) + var(--spacing-md));
   font-size: var(--font-size-lg);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   color: var(--text-primary);
   background: transparent;
@@ -633,7 +660,7 @@ button {
 
 .footer__title {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-md);
   padding-bottom: var(--spacing-xs);
@@ -642,7 +669,7 @@ button {
 
 .footer__main-title {
   font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-lg);
   text-align: center;
@@ -667,7 +694,7 @@ button {
 
 .footer__tech-name {
   font-size: var(--font-size-base);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   transition: color var(--transition-base);
 }
@@ -713,12 +740,12 @@ button {
 
 .footer__visitor-text {
   color: var(--text-muted);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 }
 
 .footer__visitor-count {
   color: #00ccff;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-variant-numeric: tabular-nums;
 }
 
@@ -808,7 +835,7 @@ button {
 
 .name-title {
   font-size: calc(var(--font-size-4xl) + 0.5rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-sm);
   background: var(--text-brand);
   -webkit-background-clip: text;
@@ -821,7 +848,7 @@ button {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-md);
   color: var(--text-secondary);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   transition: color var(--transition-base);
 }
 
@@ -843,9 +870,9 @@ button {
 }
 
 .section-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   font-size: var(--font-size-2xl);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--text-primary);
   margin-bottom: calc(var(--spacing-md) + var(--spacing-sm));
   position: relative;
@@ -885,7 +912,7 @@ button {
 
 .position-title {
   font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
   transition: color var(--transition-base);
@@ -931,7 +958,7 @@ button {
 
 .degree-title {
   font-size: var(--font-size-2xl);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
   transition: color var(--transition-base);
@@ -964,7 +991,7 @@ button {
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   transition: all var(--transition-base);
 }
 
@@ -1013,6 +1040,7 @@ button {
   display: flex;
   gap: var(--spacing-md);
   justify-content: center;
+  margin: var(--spacing-md) 0 var(--spacing-2xl) 0;
 }
 
 .recommendations-section {
@@ -1036,7 +1064,7 @@ button {
 
 .recommendations-title {
   font-size: calc(var(--font-size-4xl) - 0.25rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   text-align: center;
   margin-bottom: var(--spacing-xl);
@@ -1052,9 +1080,40 @@ button {
   }
 }
 
+
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%, 12.5% { 
+    opacity: 1; 
+    color: #00ff88;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.6), 0 0 16px rgba(0, 255, 136, 0.3);
+  }
+  12.6%, 25% { 
+    opacity: 0; 
+  }
+  25.1%, 37.5% { 
+    opacity: 1; 
+    color: #00ccff;
+    text-shadow: 0 0 8px rgba(0, 204, 255, 0.6), 0 0 16px rgba(0, 204, 255, 0.3);
+  }
+  37.6%, 50% { 
+    opacity: 0; 
+  }
+  50.1%, 62.5% { 
+    opacity: 1; 
+    color: #cc88ff;
+    text-shadow: 0 0 8px rgba(204, 136, 255, 0.6), 0 0 16px rgba(204, 136, 255, 0.3);
+  }
+  62.6%, 75% { 
+    opacity: 0; 
+  }
+  75.1%, 87.5% { 
+    opacity: 1; 
+    color: #ff88cc;
+    text-shadow: 0 0 8px rgba(255, 136, 204, 0.6), 0 0 16px rgba(255, 136, 204, 0.3);
+  }
+  87.6%, 100% { 
+    opacity: 0; 
+  }
 }
 
 @keyframes fadeInOut {
@@ -1094,7 +1153,7 @@ button {
   }
   
   .hero__name {
-    font-size: calc(var(--font-size-5xl) + 1rem);
+    font-size: calc(var(--font-size-5xl) + 2rem);
   }
   
   .card-grid--recommendations {
@@ -1127,13 +1186,14 @@ button {
   }
   
   .hero {
-    padding: var(--spacing-md);
-    min-height: 90vh;
+    padding: calc(var(--spacing-xl) + var(--spacing-md)) var(--spacing-md) var(--spacing-md);
+    min-height: 100vh;
+    max-height: none;
   }
   
   .hero__title {
     font-size: calc(var(--font-size-4xl) - 0.25rem);
-    margin-bottom: calc(var(--spacing-md) + var(--spacing-sm));
+    margin-bottom: var(--spacing-sm);
   }
   
   .hero__title-line {
@@ -1141,23 +1201,23 @@ button {
   }
   
   .hero__name {
-    font-size: var(--font-size-5xl);
+    font-size: calc(var(--font-size-5xl) + 1rem);
   }
   
   .hero__typewriter {
     font-size: var(--font-size-xl);
-    margin-bottom: calc(var(--spacing-md) + var(--spacing-sm));
+    margin-bottom: var(--spacing-md);
   }
   
   .hero__profile-avatar {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   }
   
   .card-grid--stats {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    margin: var(--spacing-lg) 0;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-md) 0;
   }
   
   .card--stat {
@@ -1171,6 +1231,7 @@ button {
   
   .social-links {
     gap: var(--spacing-sm);
+    margin: var(--spacing-sm) 0 var(--spacing-md) 0;
   }
   
   .btn--social {
@@ -1215,7 +1276,7 @@ button {
   }
   
   .hero__name {
-    font-size: calc(var(--font-size-4xl) - 0.25rem);
+    font-size: var(--font-size-5xl);
   }
   
   .hero__typewriter {
@@ -1223,8 +1284,8 @@ button {
   }
   
   .hero__profile-avatar {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
   
   .card--recommendation {
@@ -1269,7 +1330,7 @@ button {
 .nav__dropdown-link {
   color: var(--text-nav);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
   letter-spacing: 0.5px;
   padding: var(--spacing-md) var(--spacing-lg);
@@ -1288,7 +1349,7 @@ button {
 .nav__dropdown-link--active {
   color: rgba(0, 255, 136, 0.6);
   background: rgba(148, 163, 184, 0.08);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .nav__dropdown-link--active:hover {
@@ -1378,8 +1439,8 @@ button {
 
 .page-title {
   font-size: 4.5rem;
-  font-weight: 400;
-  font-family: 'Knewave', 'Georgia', serif;
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-heading);
   color: #e2e8f0;
   letter-spacing: 0.05em;
   margin: 0;
@@ -1411,7 +1472,7 @@ button {
 .stat-value {
   display: block;
   font-size: var(--font-size-3xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   line-height: 1;
 }
@@ -1423,7 +1484,7 @@ button {
   margin-top: var(--spacing-xs);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .teaching-grid {
@@ -1495,7 +1556,7 @@ button {
 
 .card-title {
   font-size: var(--font-size-xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   line-height: 1.3;
   flex-grow: 1;
@@ -1507,7 +1568,7 @@ button {
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-md);
   font-size: var(--font-size-xs);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1516,7 +1577,7 @@ button {
 .card-institution {
   color: var(--text-muted);
   font-size: var(--font-size-base);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .card-description {
@@ -1541,7 +1602,7 @@ button {
   font-size: var(--font-size-xs);
   border: 1px solid rgba(59, 130, 246, 0.2);
   transition: all var(--transition-fast);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .achievement-tag:hover {
@@ -1595,7 +1656,7 @@ button {
 
 .detail-content h4 {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin: 0;
 }
@@ -1707,7 +1768,7 @@ button {
 
 .feedback-title {
   font-size: var(--font-size-3xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin: 0 0 var(--spacing-sm) 0;
 }
@@ -1772,7 +1833,7 @@ button {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-align: center;
 }
 
@@ -1834,7 +1895,7 @@ button {
 
 .contact-title {
   font-size: var(--font-size-4xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin: 0 0 var(--spacing-md) 0;
 }
@@ -1932,7 +1993,7 @@ button {
 
 .contact-method {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin: 0 0 var(--spacing-xs) 0;
 }
@@ -1985,7 +2046,7 @@ button {
 
 .message-title {
   font-size: var(--font-size-xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin: 0 0 var(--spacing-md) 0;
 }
@@ -2080,7 +2141,7 @@ button {
 }
 
 .blog-title {
-  font-family: 'Knewave', cursive;
+  font-family: var(--font-heading);
   font-size: var(--font-size-3xl);
   background: var(--text-hero);
   background-clip: text;
@@ -2092,7 +2153,7 @@ button {
 .blog-subtitle {
   font-size: var(--font-size-lg);
   color: var(--text-secondary);
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
 }
 
 .blog-posts {
@@ -2129,7 +2190,7 @@ button {
   color: var(--bg-primary);
   padding: var(--spacing-xs) var(--spacing-md);
   font-size: var(--font-size-xs);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-transform: lowercase;
   letter-spacing: 0.3px;
   border-radius: 0 12px 0 12px;
@@ -2279,7 +2340,7 @@ button {
 
 .post-title {
   font-size: var(--font-size-xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -2317,7 +2378,7 @@ button {
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: 20px;
   font-size: var(--font-size-xs);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   border: 1px solid var(--border-primary);
 }
 
@@ -2335,7 +2396,7 @@ button {
 .read-more {
   color: rgba(0, 255, 136, 0.8);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   transition: color 0.3s ease;
 }
 
@@ -2391,7 +2452,7 @@ button {
 
 .post-article .post-title {
   font-size: var(--font-size-2xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-md);
   color: var(--text-primary);
 }
@@ -2403,14 +2464,14 @@ button {
 
 .post-content h2 {
   font-size: var(--font-size-xl);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   margin: var(--spacing-lg) 0 var(--spacing-md) 0;
   color: var(--text-primary);
 }
 
 .post-content h3 {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   margin: var(--spacing-md) 0 var(--spacing-sm) 0;
   color: var(--text-secondary);
 }
@@ -2433,7 +2494,7 @@ button {
   background: rgba(255, 255, 255, 0.1);
   padding: 2px 6px;
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-code);
   font-size: 0.9em;
 }
 
@@ -2460,7 +2521,7 @@ button {
 .back-to-blog {
   color: rgba(0, 255, 136, 0.8);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   transition: color 0.3s ease;
 }
 
