@@ -12,3 +12,4 @@ terraform.tfstate
 .terraform.lock.hcl
 LICENSE.txt
 terraform-provider-aws_v6.3.0_x5
+cloud-infra/
