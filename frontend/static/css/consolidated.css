@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Ubuntu+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Ubuntu+Mono:wght@300;400;500;600&family=Knewave&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -632,8 +632,7 @@ button {
   background: var(--bg-card);
   border-top: 1px solid var(--border-primary);
   margin-top: var(--spacing-xl);
-  padding: var(--spacing-xl) 0 var(--spacing-md) 0;
-  font-size: 0.7em;
+  padding: var(--spacing-lg) 0 var(--spacing-md) 0;
 }
 
 .footer__container {
@@ -642,75 +641,155 @@ button {
   padding: 0 var(--spacing-lg);
 }
 
-.footer__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-  justify-items: center;
-  max-width: 630px;
-  margin: 0 auto var(--spacing-lg) auto;
-}
-
-.footer__section {
-  display: flex;
-  flex-direction: column;
+.footer__tech-section {
   text-align: center;
-}
-
-.footer__title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-md);
-  padding-bottom: var(--spacing-xs);
-  border-bottom: 1px solid var(--border-primary);
-}
-
-.footer__main-title {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
   margin-bottom: var(--spacing-lg);
-  text-align: center;
 }
 
-.footer__tech-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-.footer__tech-item {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--spacing-xs) * 0.5);
-  padding: calc(var(--spacing-sm) * 0.7) 0;
-  transition: all var(--transition-base);
-}
-
-.footer__tech-name {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
-  transition: color var(--transition-base);
-}
-
-.footer__tech-desc {
+.footer__tech-title {
+  font-family: var(--font-primary);
   font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
   color: var(--text-muted);
-  transition: color var(--transition-base);
+  margin-bottom: var(--spacing-md);
 }
 
-.footer__tech-item:hover .footer__tech-name {
-  color: rgba(0, 255, 136, 0.6);
+.footer__tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
 }
 
-.footer__tech-item:hover .footer__tech-desc {
-  color: var(--text-body);
+.footer__tech-tag {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-base);
+  cursor: default;
+  border: 1px solid;
+}
+
+/* Hugo - Pink */
+.hugo-tag {
+  background: rgba(255, 20, 147, 0.03);
+  color: rgba(255, 20, 147, 0.3);
+  border-color: rgba(255, 20, 147, 0.1);
+}
+
+.hugo-tag:hover {
+  background: rgba(255, 20, 147, 0.15);
+  border-color: rgba(255, 20, 147, 0.4);
+  color: rgba(255, 20, 147, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.3);
+}
+
+/* AWS S3 - Orange */
+.aws-s3-tag {
+  background: rgba(255, 152, 0, 0.03);
+  color: rgba(255, 152, 0, 0.3);
+  border-color: rgba(255, 152, 0, 0.1);
+}
+
+.aws-s3-tag:hover {
+  background: rgba(255, 152, 0, 0.15);
+  border-color: rgba(255, 152, 0, 0.4);
+  color: rgba(255, 152, 0, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.3);
+}
+
+/* CloudFront - Blue */
+.cloudfront-tag {
+  background: rgba(0, 150, 255, 0.03);
+  color: rgba(0, 150, 255, 0.3);
+  border-color: rgba(0, 150, 255, 0.1);
+}
+
+.cloudfront-tag:hover {
+  background: rgba(0, 150, 255, 0.15);
+  border-color: rgba(0, 150, 255, 0.4);
+  color: rgba(0, 150, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.3);
+}
+
+/* Route 53 - Green */
+.route53-tag {
+  background: rgba(0, 200, 100, 0.03);
+  color: rgba(0, 200, 100, 0.3);
+  border-color: rgba(0, 200, 100, 0.1);
+}
+
+.route53-tag:hover {
+  background: rgba(0, 200, 100, 0.15);
+  border-color: rgba(0, 200, 100, 0.4);
+  color: rgba(0, 200, 100, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 200, 100, 0.3);
+}
+
+/* DynamoDB - Purple */
+.dynamodb-tag {
+  background: rgba(138, 43, 226, 0.03);
+  color: rgba(138, 43, 226, 0.3);
+  border-color: rgba(138, 43, 226, 0.1);
+}
+
+.dynamodb-tag:hover {
+  background: rgba(138, 43, 226, 0.15);
+  border-color: rgba(138, 43, 226, 0.4);
+  color: rgba(138, 43, 226, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.3);
+}
+
+/* GitHub Actions - Cyan */
+.github-tag {
+  background: rgba(0, 255, 255, 0.03);
+  color: rgba(0, 255, 255, 0.3);
+  border-color: rgba(0, 255, 255, 0.1);
+}
+
+.github-tag:hover {
+  background: rgba(0, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.4);
+  color: rgba(0, 255, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+/* Terraform - Purple (signature theme color) */
+.terraform-tag {
+  background: rgba(204, 136, 255, 0.03);
+  color: rgba(204, 136, 255, 0.3);
+  border-color: rgba(204, 136, 255, 0.1);
+}
+
+.terraform-tag:hover {
+  background: rgba(204, 136, 255, 0.15);
+  border-color: rgba(204, 136, 255, 0.4);
+  color: rgba(204, 136, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(204, 136, 255, 0.3);
+}
+
+/* AWS Lambda - Red */
+.lambda-tag {
+  background: rgba(255, 69, 58, 0.03);
+  color: rgba(255, 69, 58, 0.3);
+  border-color: rgba(255, 69, 58, 0.1);
+}
+
+.lambda-tag:hover {
+  background: rgba(255, 69, 58, 0.15);
+  border-color: rgba(255, 69, 58, 0.4);
+  color: rgba(255, 69, 58, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 69, 58, 0.3);
 }
 
 .footer__bottom {
@@ -1022,6 +1101,65 @@ button {
   left: 0;
   color: var(--text-muted);
   font-weight: bold;
+}
+
+.certification-badges {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+
+.badge-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.badge-image {
+  max-width: 120px;
+  max-height: 200px;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  object-fit: contain;
+}
+
+/* Terraform Badge - Purple Glow */
+.terraform-badge {
+  filter: drop-shadow(0 0 8px rgba(204, 136, 255, 0.4)) drop-shadow(0 0 16px rgba(204, 136, 255, 0.3));
+}
+
+.badge-link:hover .terraform-badge {
+  filter: drop-shadow(0 0 16px rgba(204, 136, 255, 0.7)) drop-shadow(0 0 32px rgba(204, 136, 255, 0.5)) drop-shadow(0 0 48px rgba(204, 136, 255, 0.3));
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* AWS Badge - Blue Glow */
+.aws-badge {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.3));
+}
+
+.badge-link:hover .aws-badge {
+  filter: drop-shadow(0 0 16px rgba(59, 130, 246, 0.7)) drop-shadow(0 0 32px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 48px rgba(59, 130, 246, 0.3));
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* General hover and active states */
+.badge-link:active .badge-image {
+  transform: scale(0.98);
+}
+
+.credly-badge iframe {
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base);
+}
+
+.credly-badge:hover iframe {
+  transform: scale(1.02);
 }
 
 .cta-section {
@@ -1395,6 +1533,24 @@ button {
   .blog-post-card {
     padding: var(--spacing-md);
     gap: var(--spacing-md);
+  }
+  
+  /* Footer fixes for mobile portrait */
+  .footer {
+    padding: var(--spacing-sm) 0;
+    margin-top: var(--spacing-md);
+  }
+  
+  .footer__tech-section {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer__tech-tags {
+    gap: var(--spacing-xs);
+  }
+  
+  .footer__bottom {
+    padding-top: var(--spacing-xs);
   }
 }
 

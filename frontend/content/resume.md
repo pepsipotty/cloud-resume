@@ -39,7 +39,4 @@ skills:
   - "Machine Learning"
   - "Data Analysis"
   - "Cloud Computing (AWS)"
-certifications:
-  - "AWS Certified Solutions Architect – Associate"
-  - "Certified Kubernetes Administrator (CKA)"
 ---
