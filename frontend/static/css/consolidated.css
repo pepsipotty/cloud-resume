@@ -101,7 +101,7 @@
 
 /*basic page setup */
 html {
-  background: var(--bg-primary);
+  background-color: blue !important;
   min-height: 100vh;
   overscroll-behavior: none;
 }
