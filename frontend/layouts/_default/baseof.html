@@ -149,9 +149,13 @@
 
         // Fetch visitor count
         async function fetchVisitorCount() {
+            console.log('Fetching visitor count...');
             const response = await fetch('https://udmbjvjlfsnssb3bcvxiiot5yy0athym.lambda-url.us-east-1.on.aws/');
+            console.log('Response status:', response.status);
             const data = await response.json();
+            console.log('Response data:', data);
             document.getElementById('visitor-count').textContent = data.count;
+            console.log('Updated visitor count to:', data.count);
         }
 
         // Initialize everything when DOM is loaded
