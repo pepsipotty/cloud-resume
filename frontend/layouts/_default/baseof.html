@@ -147,10 +147,18 @@
             });
         }
 
+        // Fetch visitor count
+        async function fetchVisitorCount() {
+            const response = await fetch('https://udmbjvjlfsnssb3bcvxiiot5yy0athym.lambda-url.us-east-1.on.aws/');
+            const data = await response.json();
+            document.getElementById('visitor-count').textContent = data.count;
+        }
+
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             initTypewriter();
             initMobileNav();
+            fetchVisitorCount();
             
             // add click animations to card stats
             const statCards = document.querySelectorAll('.card--stat');
