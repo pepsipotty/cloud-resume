@@ -112,6 +112,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   transition: background var(--transition-base);
   overscroll-behavior: none;
 }
@@ -614,6 +616,7 @@ button {
 
 /* Layout Components */
 .main-content {
+  flex: 1;
   padding: var(--spacing-lg) var(--spacing-md);
 }
 
@@ -2036,12 +2039,13 @@ button {
 
 .contact-page {
   background: var(--bg-primary);
+  min-height: 100%;
 }
 
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
 }
 
 .contact-header {
@@ -2666,6 +2670,44 @@ button {
 .post-content pre code {
   background: none;
   padding: 0;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: var(--spacing-md) 0;
+  box-shadow: var(--shadow-card);
+}
+
+.post-content a {
+  color: #00ccff;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 204, 255, 0.3);
+  text-underline-offset: 3px;
+  transition: all var(--transition-base);
+}
+
+.post-content a:hover {
+  color: #33d9ff;
+  text-decoration-color: #33d9ff;
+  cursor: pointer;
+}
+
+.post-content blockquote {
+  background: rgba(0, 204, 255, 0.05);
+  border-left: 4px solid #00ccff;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-content blockquote strong {
+  color: #00ccff;
+  font-style: normal;
 }
 
 .post-footer {
