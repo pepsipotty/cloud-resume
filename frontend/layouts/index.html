@@ -38,11 +38,11 @@
                 <article class="card card--stat" data-stat="3">
                     <div class="stat-card__icon" aria-hidden="true">🏅</div>
                     <div class="stat-card__number">3</div>
-                    <div class="stat-card__label">AWS Certifications</div>
+                    <div class="stat-card__label">Cloud Certifications</div>
                 </article>
-                <article class="card card--stat" data-stat="25+">
+                <article class="card card--stat" data-stat="15+">
                     <div class="stat-card__icon" aria-hidden="true">🚀</div>
-                    <div class="stat-card__number">25+</div>
+                    <div class="stat-card__number">15+</div>
                     <div class="stat-card__label">Projects Delivered</div>
                 </article>
             </section>
@@ -76,49 +76,7 @@
             
         </div>
 
-        <div class="hero__scroll-indicator" 
-             role="button" 
-             tabindex="0" 
-             aria-label="Scroll down to see more content">
-            <div class="hero__scroll-text">Scroll to explore</div>
-            <div class="hero__scroll-arrow" aria-hidden="true">↓</div>
-        </div>
-
         
     </section>
 
-        {{ if eq .Page.Kind "home" }}
-    <!-- some recommendations from ppl -->
-    <section class="recommendations-section">
-        <div class="recommendations-container">
-            <h2 class="recommendations-title">Recommendations</h2>
-            <div class="card-grid card-grid--recommendations">
-                <article class="card card--recommendation">
-                    <div class="recommendation-card__quote" aria-hidden="true">"</div>
-                    <p class="recommendation-card__text">Sengwei consistently demonstrates exceptional leadership skills and technical expertise. His ability to drive complex projects to completion while maintaining team morale is truly remarkable.</p>
-                    <div class="recommendation-card__author">
-                        <div class="recommendation-card__name">Sarah Chen</div>
-                        <div class="recommendation-card__title">Senior Engineering Manager at Tech Corp</div>
-                    </div>
-                </article>
-                <article class="card card--recommendation">
-                    <div class="recommendation-card__quote" aria-hidden="true">"</div>
-                    <p class="recommendation-card__text">Working with Sengwei has been an absolute pleasure. His innovative approach to problem-solving and dedication to excellence make him an invaluable team member.</p>
-                    <div class="recommendation-card__author">
-                        <div class="recommendation-card__name">Michael Rodriguez</div>
-                        <div class="recommendation-card__title">Product Director at Innovation Labs</div>
-                    </div>
-                </article>
-                <article class="card card--recommendation">
-                    <div class="recommendation-card__quote" aria-hidden="true">"</div>
-                    <p class="recommendation-card__text">Sengwei brings both technical depth and business acumen to every project. His collaborative spirit and mentorship have significantly impacted our team's success.</p>
-                    <div class="recommendation-card__author">
-                        <div class="recommendation-card__name">Dr. Emily Watson</div>
-                        <div class="recommendation-card__title">CTO at Future Systems</div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-    {{ end }}
 {{ end }}
