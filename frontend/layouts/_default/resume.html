@@ -4,13 +4,15 @@
         <div class="resume-card header-card">
             <div class="text-center">
                 <h1 class="name-title">Sengwei Yeoh</h1>
-                <p class="job-title">Software Engineer | DevOps Engineer</p>
+                <p class="job-title">Full Stack Developer & Graduate Teaching Associate</p>
                 <div class="contact-info">
-                    <span>work@sengweiyeoh.com</span>
+                    <span>yeoh.29@osu.edu</span>
                     <span class="divider">•</span>
-                    <span>(614) 207 6960</span>
+                    <span>(614)&nbsp;207‑6960</span>
                     <span class="divider">•</span>
-                    <span>Columbus, OH</span>
+                    <span><a href="https://github.com/pepsipotty" target="_blank">github.com/pepsipotty</a></span>
+                    <span class="divider">•</span>
+                    <span>Columbus,&nbsp;Ohio</span>
                 </div>
             </div>
         </div>
@@ -35,6 +37,21 @@
                     <li class="achievement-item">{{ . }}</li>
                     {{ end }}
                 </ul>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Projects -->
+        <div class="resume-card">
+            <h2 class="section-title">Projects</h2>
+            {{ range .Params.projects }}
+            <div class="project-item">
+                <div class="project-header">
+                    <h3 class="project-title">{{ .name }}</h3>
+                    <p class="project-info">{{ .period }}</p>
+                </div>
+                <p class="project-description">{{ .description }}</p>
+                <p class="project-technologies"><strong>Technologies:</strong> {{ .technologies }}</p>
             </div>
             {{ end }}
         </div>
