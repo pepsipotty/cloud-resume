@@ -992,6 +992,47 @@ button {
   margin-bottom: var(--spacing-md);
 }
 
+.project-item {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.project-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.project-info {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.project-description {
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-technologies {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
 .position-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
