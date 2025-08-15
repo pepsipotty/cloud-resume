@@ -46,12 +46,93 @@
             <h2 class="section-title">Projects</h2>
             {{ range .Params.projects }}
             <div class="project-item">
-                <div class="project-header">
-                    <h3 class="project-title">{{ .name }}</h3>
-                    <p class="project-info">{{ .period }}</p>
+                <div class="project-header" onclick="toggleProject(this)">
+                    <div class="project-summary">
+                        <h3 class="project-title">{{ .name }}</h3>
+                        <p class="project-info">{{ .period }}</p>
+                        <p class="project-description">{{ .description }}</p>
+                        <span class="expand-hint">Click to expand</span>
+                    </div>
+                    <div class="project-toggle">
+                        <svg class="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
-                <p class="project-description">{{ .description }}</p>
-                <p class="project-technologies"><strong>Technologies:</strong> {{ .technologies }}</p>
+                
+                <div class="project-details" style="display: none;">
+                    <div class="project-content">
+                        <div class="project-visual">
+                            {{ if .image }}
+                            <img src="{{ .image }}" alt="{{ .name }} preview" class="project-image">
+                            {{ else }}
+                            <img src="/images/projects/Placeholder.avif" alt="{{ .name }} preview" class="project-image project-placeholder-img">
+                            {{ end }}
+                        </div>
+                        
+                        <div class="project-info-expanded">
+                            {{ if .detailed_description }}
+                            <p class="project-detailed-description">{{ .detailed_description }}</p>
+                            {{ end }}
+                            
+                            {{ if .key_features }}
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    {{ range .key_features }}
+                                    <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                            {{ end }}
+                            <!-- fucking messy but i guess this works. to review approach -->
+                            {{ if .technologies }}
+                            <div class="project-tech-stack">
+                                <h4>Technologies:</h4>
+                                <div class="tech-tags">
+                                    {{ if reflect.IsSlice .technologies }}
+                                        {{ range .technologies }}
+                                        <span class="tech-tag">{{ . }}</span>
+                                        {{ end }}
+                                    {{ else }}
+                                        {{ range split .technologies ", " }}
+                                        {{ $tech := trim . " " }}
+                                        {{ $cleanTech := replace $tech "\u00a0" " " }}
+                                        {{ $color := "purple" }}
+                                        {{ if eq $cleanTech "Next.js" }}{{ $color = "blue" }}{{ end }}
+                                        {{ if eq $cleanTech "Firebase" }}{{ $color = "amber" }}{{ end }}
+                                        {{ if eq $cleanTech "Docker" }}{{ $color = "teal" }}{{ end }}
+                                        {{ if eq $cleanTech "Chakra UI" }}{{ $color = "purple" }}{{ end }}
+                                        {{ if eq $cleanTech "TypeScript" }}{{ $color = "blue" }}{{ end }}
+                                        {{ if eq $cleanTech "Python" }}{{ $color = "emerald" }}{{ end }}
+                                        {{ if eq $cleanTech "FastAPI" }}{{ $color = "rose" }}{{ end }}
+                                        {{ if eq $cleanTech "PyTorch" }}{{ $color = "amber" }}{{ end }}
+                                        {{ if eq $cleanTech "RunPod" }}{{ $color = "teal" }}{{ end }}
+                                        {{ if eq $cleanTech "Kotlin" }}{{ $color = "teal" }}{{ end }}
+                                        {{ if eq $cleanTech "Jetpack Compose" }}{{ $color = "rose" }}{{ end }}
+                                        {{ if eq $cleanTech "REST API" }}{{ $color = "blue" }}{{ end }}
+                                        {{ if eq $cleanTech "JGraphT" }}{{ $color = "emerald" }}{{ end }}
+                                        {{ if eq $cleanTech "GraphViz" }}{{ $color = "amber" }}{{ end }}
+                                        {{ if eq $cleanTech "Google's ML Kit" }}{{ $color = "purple" }}{{ end }}
+                                        <span class="pellet pellet--{{ $color }}" title="{{ $cleanTech }}">{{ $cleanTech }}</span>
+                                        {{ end }}
+                                    {{ end }}
+                                </div>
+                            </div>
+                            {{ end }}
+                            
+                            {{ if .github_url }}
+                            <div class="project-actions">
+                                <a href="{{ .github_url }}" target="_blank" class="github-button" aria-label="View project on GitHub">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
             </div>
             {{ end }}
         </div>
