@@ -1,4 +1,4 @@
-/* hero section and components */
+/* hero */
 .hero {
   padding: calc(var(--spacing-xl) + var(--spacing-lg)) var(--spacing-lg) var(--spacing-lg);
   text-align: center;
@@ -150,7 +150,6 @@
   animation: upDown 2s infinite;
 }
 
-/* CTA Section and Buttons */
 .cta-section {
   margin: var(--spacing-xl) 0;
 }
@@ -163,7 +162,6 @@
   flex-wrap: wrap;
 }
 
-/* cta button. todo neon accent */
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -217,7 +215,6 @@
   transform: translateX(4px);
 }
 
-/* Social Links */
 .social-links {
   display: flex;
   gap: var(--spacing-md);
@@ -253,9 +250,7 @@
   color: var(--text-primary);
 }
 
-/* Media Queries */
 
-/* for smaller screens */
 @media (max-width: 1024px) {
   .hero__content {
     max-width: 700px;

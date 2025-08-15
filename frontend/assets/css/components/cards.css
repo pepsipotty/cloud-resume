@@ -1,20 +1,5 @@
-/* ================================================
-   CARDS COMPONENT
-   ================================================
-   Complete card system including:
-   - Base card styles
-   - Stat cards
-   - Recommendation cards
-   - Project cards
-   - Teaching cards
-   - Card grid layouts
-   - Pellet system for tags
-   - Card animations and hover effects
-   ================================================ */
+/* cards n things */
 
-/* ================================================
-   BASE CARD STYLES
-   ================================================ */
 
 .card {
   background: var(--bg-card);
@@ -31,9 +16,6 @@
   border-color: var(--border-hover);
 }
 
-/* ================================================
-   STAT CARDS
-   ================================================ */
 
 .card--stat {
   padding: var(--spacing-lg);
@@ -68,9 +50,6 @@
   font-size: var(--font-size-base);
 }
 
-/* ================================================
-   RECOMMENDATION CARDS
-   ================================================ */
 
 .card--recommendation {
   background: var(--bg-primary);
@@ -121,9 +100,6 @@
   font-weight: var(--font-weight-medium);
 }
 
-/* ================================================
-   CARD GRID LAYOUTS
-   ================================================ */
 
 .card-grid {
   display: grid;
@@ -141,9 +117,7 @@
   margin-bottom: var(--spacing-lg);
 }
 
-/* ================================================
-   PROJECT CARDS
-   ================================================ */
+/* projects */
 
 .project-item {
   margin-bottom: var(--spacing-lg);
@@ -346,9 +320,6 @@
   transform: scale(1.1);
 }
 
-/* ================================================
-   TEACHING CARDS
-   ================================================ */
 
 .teaching-card-modern {
   position: relative;
@@ -459,7 +430,6 @@
   transform: translateY(-2px);
 }
 
-/* Teaching Card Detail Components */
 .card-details {
   display: flex;
   flex-direction: column;
@@ -516,7 +486,6 @@
   margin: 0;
 }
 
-/* Feedback Section Components */
 .feedback-section {
   padding: 0;
   background: transparent;
@@ -567,9 +536,7 @@
   text-align: center;
 }
 
-/* ================================================
-   PELLET SYSTEM FOR TAGS
-   ================================================ */
+/* tags */
 
 .pellet {
   padding: calc(var(--spacing-xs) * 0.75) var(--spacing-sm);
@@ -585,10 +552,9 @@
 }
 
 .pellet:hover {
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* little bounce goes brrr */
 }
 
-/* Pellet Color Modifiers */
 .pellet--purple {
   background: var(--pellet-purple-bg);
   color: var(--pellet-purple-text);
@@ -667,9 +633,6 @@
   box-shadow: 0 2px 8px var(--pellet-emerald-shadow);
 }
 
-/* ================================================
-   LEGACY SUPPORT - TAG CLASSES
-   ================================================ */
 
 .tech-tags {
   display: flex;
@@ -677,7 +640,6 @@
   gap: var(--spacing-xs);
 }
 
-/* Legacy Support - Map old classes to new system */
 .tech-tag {
   padding: calc(var(--spacing-xs) * 0.75) var(--spacing-sm);
   border-radius: calc(var(--radius-full) * 0.8);
@@ -701,9 +663,6 @@
 }
 
 
-/* ================================================
-   CARD ANIMATIONS & KEYFRAMES
-   ================================================ */
 
 @keyframes slideDown {
   from {
@@ -728,18 +687,13 @@
   }
 }
 
-/* ================================================
-   RESPONSIVE DESIGN
-   ================================================ */
 
-/* Tablet and smaller desktop screens */
 @media (max-width: 1024px) {
   .card-grid--recommendations {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
-/* Mobile screens */
 @media (max-width: 768px) {
   .project-content {
     grid-template-columns: 1fr;

@@ -1,12 +1,11 @@
-/* Font imports */
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Ubuntu+Mono:wght@300;400;500;600&family=Knewave&display=swap');
 
-/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Basic page setup */
+/* page basics */
 html {
   background-color: #050810 !important;
   min-height: 100vh;
