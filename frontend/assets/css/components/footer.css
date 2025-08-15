@@ -1,0 +1,262 @@
+/* ================================================
+   FOOTER COMPONENT
+   ================================================
+   Complete footer system including:
+   - Footer layout and structure
+   - Tech badge system with color variants
+   - Visitor counter
+   - Footer bottom section
+   - Responsive design
+   ================================================ */
+
+/* ================================================
+   MAIN FOOTER STYLES
+   ================================================ */
+
+.footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-primary);
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg) 0 var(--spacing-md) 0;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* ================================================
+   TECH SECTION
+   ================================================ */
+
+.footer__tech-section {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer__tech-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__tech-tag {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-base);
+  cursor: default;
+  border: 1px solid;
+}
+
+/* ================================================
+   TECH BADGE COLOR VARIANTS
+   ================================================ */
+
+/* Hugo - Pink */
+.hugo-tag {
+  background: rgba(255, 20, 147, 0.03);
+  color: rgba(255, 20, 147, 0.3);
+  border-color: rgba(255, 20, 147, 0.1);
+}
+
+.hugo-tag:hover {
+  background: rgba(255, 20, 147, 0.15);
+  border-color: rgba(255, 20, 147, 0.4);
+  color: rgba(255, 20, 147, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.3);
+}
+
+/* AWS S3 - Orange */
+.aws-s3-tag {
+  background: rgba(255, 152, 0, 0.03);
+  color: rgba(255, 152, 0, 0.3);
+  border-color: rgba(255, 152, 0, 0.1);
+}
+
+.aws-s3-tag:hover {
+  background: rgba(255, 152, 0, 0.15);
+  border-color: rgba(255, 152, 0, 0.4);
+  color: rgba(255, 152, 0, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.3);
+}
+
+/* CloudFront - Blue */
+.cloudfront-tag {
+  background: rgba(0, 150, 255, 0.03);
+  color: rgba(0, 150, 255, 0.3);
+  border-color: rgba(0, 150, 255, 0.1);
+}
+
+.cloudfront-tag:hover {
+  background: rgba(0, 150, 255, 0.15);
+  border-color: rgba(0, 150, 255, 0.4);
+  color: rgba(0, 150, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.3);
+}
+
+/* Route 53 - Green */
+.route53-tag {
+  background: rgba(0, 200, 100, 0.03);
+  color: rgba(0, 200, 100, 0.3);
+  border-color: rgba(0, 200, 100, 0.1);
+}
+
+.route53-tag:hover {
+  background: rgba(0, 200, 100, 0.15);
+  border-color: rgba(0, 200, 100, 0.4);
+  color: rgba(0, 200, 100, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 200, 100, 0.3);
+}
+
+/* DynamoDB - Purple */
+.dynamodb-tag {
+  background: rgba(138, 43, 226, 0.03);
+  color: rgba(138, 43, 226, 0.3);
+  border-color: rgba(138, 43, 226, 0.1);
+}
+
+.dynamodb-tag:hover {
+  background: rgba(138, 43, 226, 0.15);
+  border-color: rgba(138, 43, 226, 0.4);
+  color: rgba(138, 43, 226, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.3);
+}
+
+/* GitHub Actions - Cyan */
+.github-tag {
+  background: rgba(0, 255, 255, 0.03);
+  color: rgba(0, 255, 255, 0.3);
+  border-color: rgba(0, 255, 255, 0.1);
+}
+
+.github-tag:hover {
+  background: rgba(0, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.4);
+  color: rgba(0, 255, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+/* Terraform - Purple (signature theme color) */
+.terraform-tag {
+  background: rgba(204, 136, 255, 0.03);
+  color: rgba(204, 136, 255, 0.3);
+  border-color: rgba(204, 136, 255, 0.1);
+}
+
+.terraform-tag:hover {
+  background: rgba(204, 136, 255, 0.15);
+  border-color: rgba(204, 136, 255, 0.4);
+  color: rgba(204, 136, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(204, 136, 255, 0.3);
+}
+
+/* AWS Lambda - Red */
+.lambda-tag {
+  background: rgba(255, 69, 58, 0.03);
+  color: rgba(255, 69, 58, 0.3);
+  border-color: rgba(255, 69, 58, 0.1);
+}
+
+.lambda-tag:hover {
+  background: rgba(255, 69, 58, 0.15);
+  border-color: rgba(255, 69, 58, 0.4);
+  color: rgba(255, 69, 58, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 69, 58, 0.3);
+}
+
+/* ================================================
+   FOOTER BOTTOM SECTION
+   ================================================ */
+
+.footer__bottom {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ================================================
+   VISITOR COUNTER
+   ================================================ */
+
+.footer__visitor-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-xs) * 0.5);
+  font-size: var(--font-size-xs);
+  transition: opacity var(--transition-base);
+}
+
+.footer__visitor-text {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+.footer__visitor-count {
+  color: #00ccff;
+  font-weight: var(--font-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .footer__container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .footer__tech-tags {
+    gap: var(--spacing-xs);
+  }
+  
+  .footer__tech-tag {
+    font-size: calc(var(--font-size-xs) * 0.9);
+    padding: calc(var(--spacing-xs) * 0.75) calc(var(--spacing-sm) * 0.85);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__tech-section {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .footer__bottom {
+    padding-top: var(--spacing-sm);
+  }
+}
