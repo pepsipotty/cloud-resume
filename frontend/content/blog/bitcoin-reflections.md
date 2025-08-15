@@ -6,7 +6,7 @@ personal_note: true
 thumbnail: "/images/blog/merkle-tree.avif"
 ---
 
-After months of reading about crypto and messing around with blockchains (and sometimes losing my head over gas fees), I finally sat down with **the** original document that started it all. What follows are my notes from the early sections of Satoshi’s whitepaper mixed with a few personal thoughts. 
+After years of reading about crypto and messing around with blockchains (and sometimes losing my head over gas fees), I finally sat down with **the** original document that started it all. What follows are my notes from the early sections of Satoshi’s whitepaper mixed with a few personal thoughts. 
 
 ## Why we need a digital cash
 
@@ -32,11 +32,11 @@ It’s not just a spreadsheet, the trick is that no one can alter an old block w
 
 Why run the network at all? At first, miners get new coins for creating each block. Later, as the reward drops, they earn from transaction fees. It’s a bit like digging for gold and getting paid in the gold you find.
 
-The 21 million coin limit isn’t because of some technical number cap. Satoshi just picked it, more or less. This raises the question: if supply is fixed and demand grows, do people just hold instead of spending? That could slow the economy, maybe that’s why other projects experiment with burning coins or changing supply rules. Bitcoin keeps it conservative, whether that’s good or bad probably depends who you ask.
+The 21 million coin limit isn’t because of some technical number cap. Satoshi just picked it, kinda. This raises the question: if supply is fixed and demand grows, do people just hold instead of spending? That could slow the economy, maybe that’s why other projects experiment with burning coins or changing supply rules. Bitcoin keeps it conservative, whether that’s good or bad probably depends who you ask.
 
 ## Shrinking the blockchain
 
-If every transaction is kept forever, won’t it get too big? The paper uses Merkle trees to compress old data. Only the root hash stays in the block header and old transaction details can be pruned once enough blocks are added above them. Block headers are tiny (around 80 bytes) and grow about 4 MB a year, which is nothing compared to today’s storage.
+If every transaction is kept forever, won’t it get too big? The paper uses Merkle trees to compress old data. Only the root hash stays in the block header and old transaction details can be pruned once enough blocks are added above them. Block headers are tiny (around 80 bytes) and grow at a rate of ~4 MB a year, which is miniscule by present day standards.
 
 > Note to self: This means older receipts can be shredded as long as the cryptographic “fingerprint” stays.
 
@@ -54,7 +54,7 @@ To picture the network, think of this diagram: each node connects to a few other
 
 The first sections of the whitepaper outline a way to make payments without relying on banks using cryptography and a gossip network. The idea is simple, the implementation is where the magic is. Merkle proofs, consensus rules, incentives all work in symphony to hide layers upon layers of complexity.
 
-Reading it fresh reminded me that crypto isn’t just about prices. It’s about finding ways for strangers to agree without trusting a referee. 
+Reading it fresh reminded me that crypto isn’t just about prices or funny looking animals. It’s about finding ways for strangers to agree without trusting a referee. 
 
 
 
