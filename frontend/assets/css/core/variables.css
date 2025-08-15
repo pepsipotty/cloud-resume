@@ -11,7 +11,7 @@
   --bg-skill-tag-hover: linear-gradient(135deg, #374151 0%, #4b5563 100%);
   --bg-section-accent: rgba(148, 163, 184, 0.03);
 
-  /* Pellet Color Themes */
+  /* tag colors */
   --pellet-purple-bg: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.15) 100%);
   --pellet-purple-bg-hover: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.25) 100%);
   --pellet-purple-text: #8b5cf6;

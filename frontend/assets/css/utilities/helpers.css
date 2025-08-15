@@ -1,11 +1,9 @@
-/* Utility Classes and Helpers */
+/* utils */
 
-/* Text utilities */
 .text-center {
   text-align: center;
 }
 
-/* Display utilities */
 .display-block {
   display: block;
 }
@@ -30,7 +28,6 @@
   display: none;
 }
 
-/* Position utilities */
 .position-relative {
   position: relative;
 }
@@ -51,7 +48,6 @@
   position: static;
 }
 
-/* Z-index utilities */
 .z-dropdown {
   z-index: var(--z-dropdown);
 }
@@ -72,7 +68,6 @@
   z-index: var(--z-tooltip);
 }
 
-/* Flex utilities */
 .flex-1 {
   flex: 1;
 }
@@ -137,7 +132,6 @@
   align-items: stretch;
 }
 
-/* Width utilities */
 .w-full {
   width: 100%;
 }
@@ -150,7 +144,6 @@
   max-width: 100%;
 }
 
-/* Height utilities */
 .h-full {
   height: 100%;
 }
@@ -163,7 +156,6 @@
   min-height: 100vh;
 }
 
-/* Overflow utilities */
 .overflow-hidden {
   overflow: hidden;
 }
@@ -176,7 +168,6 @@
   overflow: visible;
 }
 
-/* Cursor utilities */
 .cursor-pointer {
   cursor: pointer;
 }
@@ -185,7 +176,6 @@
   cursor: default;
 }
 
-/* Transition utilities */
 .transition-all {
   transition: all var(--transition-base);
 }
@@ -198,7 +188,6 @@
   transition: opacity var(--transition-base);
 }
 
-/* Transform utilities */
 .transform-translateX-50 {
   transform: translateX(-50%);
 }
@@ -211,12 +200,10 @@
   transform: scaleX(1.1) scaleY(1.3);
 }
 
-/* Background utilities */
 .bg-transparent {
   background: transparent;
 }
 
-/* Border utilities */
 .border-none {
   border: none;
 }
@@ -229,7 +216,6 @@
   border: 1px solid var(--border-primary);
 }
 
-/* Border radius utilities */
 .rounded-full {
   border-radius: var(--radius-full);
 }
@@ -246,7 +232,6 @@
   border-radius: var(--radius-2xl);
 }
 
-/* Margin utilities */
 .m-0 {
   margin: 0;
 }
@@ -272,12 +257,10 @@
   margin-right: auto;
 }
 
-/* Padding utilities */
 .p-0 {
   padding: 0;
 }
 
-/* Gap utilities */
 .gap-xs {
   gap: var(--spacing-xs);
 }
@@ -298,17 +281,14 @@
   gap: var(--spacing-xl);
 }
 
-/* List utilities */
 .list-none {
   list-style: none;
 }
 
-/* Text decoration utilities */
 .text-decoration-none {
   text-decoration: none;
 }
 
-/* Font utilities */
 .font-weight-normal {
   font-weight: var(--font-weight-normal);
 }
@@ -321,7 +301,6 @@
   font-weight: var(--font-weight-bold);
 }
 
-/* Line height utilities */
 .leading-tight {
   line-height: 1.3;
 }
@@ -330,17 +309,14 @@
   line-height: 1.6;
 }
 
-/* Letter spacing utilities */
 .tracking-wide {
   letter-spacing: 0.5px;
 }
 
-/* Box shadow utilities */
 .shadow-card {
   box-shadow: var(--shadow-card);
 }
 
-/* Backdrop filter utilities */
 .backdrop-blur {
   backdrop-filter: blur(20px);
 }
@@ -353,7 +329,6 @@
   backdrop-filter: blur(30px);
 }
 
-/* Opacity utilities */
 .opacity-0 {
   opacity: 0;
 }
@@ -370,7 +345,6 @@
   opacity: 0.8;
 }
 
-/* Animation utilities */
 .animate-fadeInOut {
   animation: fadeInOut 3s infinite;
 }
@@ -387,29 +361,24 @@
   animation: genesis-background-glow 8s ease-in-out infinite;
 }
 
-/* Filter utilities */
 .filter-blur-15 {
   filter: blur(15px);
 }
 
-/* Object fit utilities */
 .object-cover {
   object-fit: cover;
 }
 
-/* Clip path utilities */
 .clip-text {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Selection utilities */
 .select-none {
   user-select: none;
 }
 
-/* Scroll behavior utilities */
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -418,22 +387,19 @@
   overscroll-behavior: none;
 }
 
-/* Box sizing utilities */
 .box-border {
   box-sizing: border-box;
 }
 
-/* White space utilities */
 .whitespace-nowrap {
   white-space: nowrap;
 }
 
-/* Word break utilities */
 .break-words {
   word-break: break-word;
 }
 
-/* Screen reader utilities */
+/* sr only stuff */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -457,14 +423,13 @@
   white-space: normal;
 }
 
-/* Clearfix utility */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive utilities for showing/hiding elements */
+/* show/hide on mobile/desktop */
 @media (max-width: 768px) {
   .hide-on-mobile {
     display: none !important;
@@ -485,7 +450,6 @@
   }
 }
 
-/* Print utilities */
 @media print {
   .print-hidden {
     display: none !important;

@@ -1,4 +1,4 @@
-/* Blog Page Styles */
+/* blog */
 .blog-page {
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -98,7 +98,6 @@
   min-width: 0;
 }
 
-/* Genesis Card Glow Effects */
 .blog-post-card.genesis {
   position: relative;
   border: 1px solid var(--border-primary);
@@ -298,7 +297,7 @@
   margin-bottom: var(--spacing-sm);
 }
 
-/* Individual Post Page Styles */
+/* post pages */
 .post-page {
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -444,7 +443,6 @@
   color: rgba(0, 255, 136, 1);
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .blog-container,
   .post-container {
@@ -508,7 +506,6 @@
   }
 }
 
-/* Additional mobile styles found in smaller media query */
 @media (max-width: 480px) {
   .blog-container {
     padding: var(--spacing-md) var(--spacing-xs);

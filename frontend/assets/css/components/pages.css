@@ -1,16 +1,6 @@
-/* ================================================
-   PAGE-SPECIFIC COMPONENTS
-   ================================================
-   Page-specific styles for:
-   - Resume page
-   - Teaching page
-   - Contact page
-   - Other specialized page layouts
-   ================================================ */
+/* pages */
 
-/* ================================================
-   RESUME PAGE STYLES
-   ================================================ */
+/* resume */
 
 .resume-container {
   max-width: 850px;
@@ -286,7 +276,6 @@
   object-fit: contain;
 }
 
-/* Certification Badge Glow Effects */
 .terraform-badge {
   filter: drop-shadow(0 0 8px rgba(204, 136, 255, 0.4)) drop-shadow(0 0 16px rgba(204, 136, 255, 0.3));
 }
@@ -318,7 +307,6 @@
   transform: scale(1.02);
 }
 
-/* Skills Section */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -349,16 +337,13 @@
   font-size: var(--font-size-base);
 }
 
-/* ================================================
-   TEACHING PAGE STYLES
-   ================================================ */
+/* teaching */
 
 .teaching-page {
   min-height: 100vh;
   background: var(--bg-primary);
 }
 
-/* Teaching Header */
 .teaching-header {
   max-width: 1200px;
   margin: 0 auto;
@@ -383,7 +368,6 @@
   margin-bottom: var(--spacing-xl);
 }
 
-/* Teaching Metrics */
 .teaching-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -449,7 +433,6 @@
   font-weight: var(--font-weight-medium);
 }
 
-/* Teaching Grid */
 .teaching-grid {
   padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   background: transparent;
@@ -464,19 +447,19 @@
   align-items: start;
 }
 
-/* ================================================
-   CONTACT PAGE STYLES
-   ================================================ */
+/* contact */
 
 .contact-page {
   background: var(--bg-primary);
-  min-height: 100%;
+  color: var(--text-primary);
+  min-height: calc(100vh - 120px);
 }
 
 .contact-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-lg) var(--spacing-lg) 0;
+  padding: var(--spacing-xl) var(--spacing-lg);
 }
 
 .contact-header {
@@ -515,7 +498,6 @@
   width: 100%;
 }
 
-/* Contact Cards */
 .contact-card {
   background: var(--bg-card);
   border-radius: var(--radius-xl);
@@ -545,7 +527,6 @@
   transition: all var(--transition-base);
 }
 
-/* Contact Card Color Variants */
 .contact-card:nth-child(1) .contact-icon {
   color: rgba(220, 38, 127, 0.8);
   background: rgba(220, 38, 127, 0.1);
@@ -623,23 +604,16 @@
   flex-direction: column;
 }
 
-/* Legacy contact info styles */
 .contact-info {
   /* This selector exists in the original file but appears to be unused */
   /* Keeping for backwards compatibility */
 }
 
-/* ================================================
-   EXPERIENCE SECTION STYLES
-   ================================================ */
 
 .experience-header {
   margin-bottom: var(--spacing-md);
 }
 
-/* ================================================
-   RECOMMENDATIONS SECTION STYLES
-   ================================================ */
 
 .recommendations-container {
   max-width: 1200px;
@@ -655,9 +629,6 @@
   margin-bottom: var(--spacing-xl);
 }
 
-/* ================================================
-   FEEDBACK SECTION STYLES
-   ================================================ */
 
 .feedback-header {
   max-width: 1400px;
@@ -693,11 +664,7 @@
   margin-bottom: var(--spacing-lg);
 }
 
-/* ================================================
-   RESPONSIVE DESIGN
-   ================================================ */
 
-/* Tablet and smaller desktop screens */
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -708,7 +675,6 @@
   }
 }
 
-/* Mobile screens */
 @media (max-width: 768px) {
   .teaching-metrics {
     grid-template-columns: 1fr;
@@ -724,12 +690,18 @@
     font-size: var(--font-size-2xl);
   }
   
-  .contact-content {
-    padding: 0 var(--spacing-md);
+  .contact-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
-  .contact-container {
-    padding: var(--spacing-md);
+  .contact-page {
+    overflow-x: hidden;
+  }
+  
+  .contact-content {
+    padding: 0 var(--spacing-md);
   }
   
   .contact-header {
@@ -743,9 +715,6 @@
   .contact-card {
     padding: var(--spacing-md);
     gap: var(--spacing-sm);
-  }
-  
-  .contact-card {
     flex-direction: column;
     text-align: center;
   }

@@ -1,6 +1,5 @@
-/* Grid and Flex Layout Classes */
+/* grids */
 
-/* Card grid layouts */
 .card-grid {
   display: grid;
   gap: var(--spacing-lg);
@@ -17,21 +16,18 @@
   margin-bottom: var(--spacing-lg);
 }
 
-/* Feedback grid */
 .feedback-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-xl);
 }
 
-/* Skills grid */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
 }
 
-/* Project content grid */
 .project-content {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -39,7 +35,6 @@
   align-items: start;
 }
 
-/* Navigation flex layouts */
 .nav__right {
   display: flex;
   align-items: center;
@@ -54,16 +49,7 @@
   gap: var(--spacing-sm);
 }
 
-.nav__dropdown-menu {
-  list-style: none;
-  margin: 0;
-  padding: var(--spacing-lg) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
 
-/* Hero profile layout */
 .hero__profile {
   display: flex;
   flex-direction: column;
@@ -86,7 +72,6 @@
   justify-content: center;
 }
 
-/* Button layouts */
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -107,7 +92,6 @@
   justify-content: center;
 }
 
-/* Footer layouts */
 .footer__tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -130,7 +114,6 @@
   gap: var(--spacing-sm);
 }
 
-/* Contact layouts */
 .contact-info {
   display: flex;
   justify-content: center;
@@ -158,7 +141,6 @@
   flex-direction: column;
 }
 
-/* Project layouts */
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -201,7 +183,6 @@
   min-height: 200px;
 }
 
-/* Tag layouts */
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -221,7 +202,6 @@
   flex-wrap: wrap;
 }
 
-/* Certification layouts */
 .certification-badges {
   display: flex;
   gap: var(--spacing-md);
@@ -231,8 +211,6 @@
   flex-wrap: wrap;
 }
 
-/* Teaching layouts */
-/* Legacy teaching-stats removed - now using .teaching-metrics */
 
 .teaching-card-modern {
   display: flex;
@@ -291,7 +269,6 @@
   flex-shrink: 0;
 }
 
-/* Feedback layouts */
 .recommendation-card__author {
   display: flex;
   flex-direction: column;
@@ -306,7 +283,6 @@
   border-top: 1px solid var(--border-primary);
 }
 
-/* Blog layouts */
 .blog-post-card {
   display: flex;
   gap: var(--spacing-lg);
@@ -342,13 +318,11 @@
   justify-content: flex-end;
 }
 
-/* Body and main layout */
 body {
   display: flex;
   flex-direction: column;
 }
 
-/* Responsive grid adjustments */
 @media (max-width: 1024px) {
   .card-grid--recommendations {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -403,7 +377,6 @@ body {
     gap: var(--spacing-sm);
   }
   
-  /* Legacy .teaching-stats removed - now handled by .teaching-metrics in pages.css */
   
   .detail-item.detail-left,
   .detail-item.detail-right {
