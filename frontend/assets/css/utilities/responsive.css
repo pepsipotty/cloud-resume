@@ -76,11 +76,7 @@
     gap: var(--spacing-sm);
   }
   
-  .teaching-stats {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    width: 100%;
-  }
+  /* Legacy .teaching-stats removed - now handled by .teaching-metrics in pages.css */
   
   .detail-item.detail-left,
   .detail-item.detail-right {
