@@ -1,0 +1,25 @@
+/* 
+ * Main CSS File - Modular Import Structure
+ * This file replaces consolidated.css with a modular approach
+ */
+
+/* Core Foundation */
+@import url('core/variables.css');
+@import url('core/base.css');
+@import url('core/animations.css');
+
+/* Layout System */
+@import url('layout/containers.css');
+@import url('layout/grid.css');
+
+/* Components */
+@import url('components/navigation.css');
+@import url('components/hero.css');
+@import url('components/cards.css');
+@import url('components/blog.css');
+@import url('components/footer.css');
+@import url('components/pages.css');
+
+/* Utilities */
+@import url('utilities/helpers.css');
+@import url('utilities/responsive.css');
