@@ -1397,6 +1397,10 @@ body {
   padding: var(--spacing-lg);
   cursor: pointer;
   transition: background var(--transition-base);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .project-header:hover {
   background: var(--bg-button-secondary-hover);
@@ -2234,6 +2238,10 @@ body {
   border-radius: var(--radius-md);
   margin: var(--spacing-md) 0;
   box-shadow: var(--shadow-card);
+}
+.post-content img[alt="p2p-diagram"], .post-content img[alt="btc-structure-1"] {
+  background-color: bisque;
+  padding: 10px;
 }
 .post-content a {
   color: #00ccff;

@@ -3,7 +3,7 @@ title: "Reflections: The Satoshi Paper"
 date: 2025-01-24
 summary: "Personal reflections on the early sections of the Bitcoin whitepaper, exploring the problems it solves and the questions it raises."
 personal_note: true
-thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bitcoin_Block_Data.svg/1024px-Bitcoin_Block_Data.svg.png"
+thumbnail: "/images/blog/merkle-tree.avif"
 ---
 
 After months of reading about crypto and messing around with blockchains (and sometimes losing my head over gas fees), I finally sat down with **the** original document that started it all. What follows are my notes from the early sections of Satoshi’s whitepaper mixed with a few personal thoughts. 
@@ -24,7 +24,7 @@ In normal payments the bank prevents that. Without a bank, everyone needs the sa
 
 Here’s a basic diagram of a Bitcoin block. Each block points to the previous one through its hash and has a **Merkle root** summarizing all transactions. There’s also a timestamp and a nonce that miners adjust until the block’s hash is under a target value:
 
-![Simplified Bitcoin block structure](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bitcoin_Block_Data.svg/1024px-Bitcoin_Block_Data.svg.png)
+![btc-structure-1](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bitcoin_Block_Data.svg/1024px-Bitcoin_Block_Data.svg.png)
 
 It’s not just a spreadsheet, the trick is that no one can alter an old block without redoing the proof-of-work for all blocks after it.
 
@@ -48,7 +48,7 @@ It sounds fair on paper but mining quickly became dominated by big operations. I
 
 To picture the network, think of this diagram: each node connects to a few others, no central hub, and transactions ripple through until everyone sees them.
 
-![Unstructured peer-to-peer network diagram](https://upload.wikimedia.org/wikipedia/commons/f/fa/Unstructured_peer-to-peer_network_diagram.png)
+![p2p-diagram](https://upload.wikimedia.org/wikipedia/commons/f/fa/Unstructured_peer-to-peer_network_diagram.png)
 
 ## To close
 
