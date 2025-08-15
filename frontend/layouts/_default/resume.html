@@ -152,9 +152,14 @@
         <!-- Skills -->
         <div class="resume-card">
             <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                {{ range .Params.skills }}
-                <span class="skill-tag">{{ . }}</span>
+            <div class="skills-categories">
+                {{ range $index, $skill := .Params.skills }}
+                <div class="skill-category">
+                    <h4 class="skill-category-title">{{ $skill.name }}</h4>
+                    <div class="skill-list">
+                        {{ delimit $skill.items ", " }}
+                    </div>
+                </div>
                 {{ end }}
             </div>
         </div>

@@ -3179,3 +3179,27 @@ button {
     order: -1;
   }
 }
+
+/* Skills Categories */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.skill-category {
+  margin-bottom: var(--spacing-md);
+}
+
+.skill-category-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-list {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+}

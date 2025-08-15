@@ -63,7 +63,36 @@ education:
 
 # Comprehensive skills list compiled from the latest résumé
 skills:
-  - "AngularJS"
+  - name: "Cloud & DevOps"
+    items:
+      - "AWS (S3, CloudFront, Route 53, ACM, Lambda, IAM)"
+      - "Terraform"
+      - "Kubernetes"
+      - "Docker"
+      - "GitHub Actions"
+  - name: "Programming & Frameworks"
+    items:
+      - "Python"
+      - "JavaScript/TypeScript"
+      - "Kotlin"
+      - "Java"
+      - "React/AngularJS"
+      - "C++"
+  - name: "Data & AI"
+    items:
+      - "PyTorch"
+      - "OpenCV"
+      - "Firebase (Firestore, Auth)"
+  - name: "Other"
+    items:
+      - "SQL"
+      - "Network Security Concepts"
+      - "JWT"
+      - "OpenID Connect"
+      - "Jira"
+      - "Confluence"
+
+---
   - "JavaScript"
   - "Python"
   - "Java"

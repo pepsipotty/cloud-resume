@@ -1,7 +1,6 @@
 ---
 title: "The Birth of This Website"
 date: 2025-08-12
-tags: ["S3", "Terraform", "GitHub Actions", "Lambda", "DynamoDB"]
 summary: "How I turned a long-time personal goal into reality by building and hosting my own website while learning AWS and Terraform."
 thumbnail: "/images/blog/big-bang.png"
 genesis: true
