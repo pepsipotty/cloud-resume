@@ -159,6 +159,21 @@
             console.log('Updated visitor count to:', data);
         }
 
+        // expand project details on click
+        function toggleProject(header) {
+            const projectItem = header.closest('.project-item');
+            const projectDetails = projectItem.querySelector('.project-details');
+            const isExpanded = projectItem.classList.contains('expanded');
+            
+            if (isExpanded) {
+                projectItem.classList.remove('expanded');
+                projectDetails.style.display = 'none';
+            } else {
+                projectItem.classList.add('expanded');
+                projectDetails.style.display = 'block';
+            }
+        }
+
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             initTypewriter();

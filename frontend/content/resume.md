@@ -33,14 +33,18 @@ projects:
     period: "Sept 2024 – Present"
     description: "Developing a crowdsourcing‑driven web platform to collect high‑quality question‑answer datasets spanning diverse knowledge domains. The platform facilitates fine‑tuning of localized large language models (LLMs) through advanced techniques like Direct Preference Optimization (DPO), enabling the creation of domain‑specific LLMs."
     technologies: "Next.js, Firebase, Docker, Chakra UI, TypeScript, Python, FastAPI, PyTorch, RunPod"
-  - name: "Dungeon Map Digitizer"
+  - name: "GraphForge"
     period: "Apr 2024 – Aug 2024"
     description: "Developed a native Android app that digitizes hand‑drawn Dungeons & Dragons maps into graph visualizations using an LLM, supporting dynamic node and edge modifications. Implemented on‑device image pre‑processing with Google’s ML Kit to enhance accuracy before visualization."
     technologies: "Kotlin, Jetpack Compose, REST API, JGraphT, GraphViz, Google’s ML Kit"
+    github_url: "https://github.com/pepsipotty/GraphForge"
+    image: "/images/projects/graph-forge.gif"
   - name: "Robust Motion Tracker"
     period: "Aug 2023 – Oct 2023"
+    image: "/images/projects/motion-track.gif"
     description: "Created a robust motion tracker employing normalized cross correlation (NCC) and covariance tracking techniques that adaptively select between them to find the best match of a tracked object."
     technologies: "Python, OpenCV"
+    github_url: "https://github.com/pepsipotty/motion-tracking"
   - name: "Dynamic Branch Predictor"
     period: "Sept 2023 – Nov 2023"
     description: "Implemented a piece‑wise linear branch predictor achieving a mis‑prediction rate of only 5.3 % with a predictor size of 64 KB."
@@ -59,7 +63,36 @@ education:
 
 # Comprehensive skills list compiled from the latest résumé
 skills:
-  - "AngularJS"
+  - name: "Cloud & DevOps"
+    items:
+      - "AWS (S3, CloudFront, Route 53, ACM, Lambda, IAM)"
+      - "Terraform"
+      - "Kubernetes"
+      - "Docker"
+      - "GitHub Actions"
+  - name: "Programming & Frameworks"
+    items:
+      - "Python"
+      - "JavaScript/TypeScript"
+      - "Kotlin"
+      - "Java"
+      - "React/AngularJS"
+      - "C++"
+  - name: "Data & AI"
+    items:
+      - "PyTorch"
+      - "OpenCV"
+      - "Firebase (Firestore, Auth)"
+  - name: "Other"
+    items:
+      - "SQL"
+      - "Network Security Concepts"
+      - "JWT"
+      - "OpenID Connect"
+      - "Jira"
+      - "Confluence"
+
+---
   - "JavaScript"
   - "Python"
   - "Java"
