@@ -444,7 +444,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: var(--spacing-lg);
-  align-items: start;
+  align-items: stretch;
 }
 
 /* contact */

@@ -1557,7 +1557,7 @@ body {
   transition: all var(--transition-base);
   display: flex;
   flex-direction: column;
-  min-height: 600px;
+  height: 100%;
 }
 .teaching-card-modern:hover {
   transform: translateY(-12px) scale(1.02);
@@ -1566,14 +1566,17 @@ body {
 }
 .card-image-wrapper {
   position: relative;
-  height: 250px;
+  height: 300px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .card-image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   transition: transform var(--transition-slow);
 }
 .teaching-card-modern:hover .card-image {
@@ -2915,7 +2918,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: var(--spacing-lg);
-  align-items: start;
+  align-items: stretch;
 }
 .contact-page {
   background: var(--bg-primary);

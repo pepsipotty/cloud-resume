@@ -13,7 +13,7 @@
                         {{ range $pages.ByDate.Reverse }}
                             <article class="blog-post-card{{ if .Params.genesis }} genesis{{ end }}">
                                 {{ if .Params.personal_note }}
-                                    <div class="personal-note-ribbon">from personal notes that predate this website</div>
+                                    <div class="personal-note-ribbon">from pre-site personal notes</div>
                                 {{ end }}
                                 <div class="blog-card-content">
                                     <div class="post-header">
@@ -46,7 +46,7 @@
                                 </div>
                                 
                                 {{ if .Params.thumbnail }}
-                                    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="blog-card-thumbnail" loading="lazy">
+                                    <img src="{{ .Params.thumbnail }}" class="blog-card-thumbnail" loading="lazy">
                                 {{ else }}
                                     <div class="blog-card-thumbnail-placeholder">
                                         <span>📝</span>
