@@ -2,10 +2,8 @@
 title: "Resume"
 layout: "resume"
 
-# Updated professional summary reflecting current academic status, professional experience and project work
 summary: "Masters candidate in Computer Science and Engineering at The Ohio State University with professional experience as a full stack developer and graduate teaching associate. Led enhancements of enterprise mobile platforms, resolved complex performance and security issues, and guided students in assembly design for 3D engineering projects. Passionate about building scalable web and mobile applications and exploring advanced machine learning techniques for innovative solutions."
 
-# Updated experience section based on the latest résumé
 experience:
   - title: "Graduate Teaching Associate"
     company: "The Ohio State University"
@@ -27,7 +25,6 @@ experience:
     achievements:
       - "Completed an internship program focused on full‑stack development and gained practical experience contributing to software development and integration tasks."
 
-# New projects section capturing significant personal and academic projects
 projects:
   - name: "Novalto"
     period: "Sept 2024 – Present"
@@ -49,19 +46,16 @@ projects:
     period: "Sept 2023 – Nov 2023"
     description: "Implemented a piece‑wise linear branch predictor achieving a mis‑prediction rate of only 5.3 % with a predictor size of 64 KB."
     technologies: "C++"
-
-# Updated education section reflecting current degree and previous degree
 education:
   - degree: "Master of Science in Computer Science and Engineering (in progress)"
     institution: "The Ohio State University"
     period: "2023 – Dec 2025"
     details: "Relevant Coursework: Mobile App Development, Computer Vision, Cybersecurity, Algorithms, Computer Architecture, Network Security, Programming Languages, Data Mining."
-  - degree: "Bachelor of Computer Science in Software Engineering (Honours)"
+  - degree: "Bachelor of Computer Science in Software Engineering"
     institution: "Universiti Tun Hussein Onn Malaysia"
     period: "2017 – 2021"
     details: "Graduated with honours."
 
-# Comprehensive skills list compiled from the latest résumé
 skills:
   - name: "Cloud & DevOps"
     items:
@@ -76,7 +70,8 @@ skills:
       - "JavaScript/TypeScript"
       - "Kotlin"
       - "Java"
-      - "React/AngularJS"
+      - "React"
+      - "AngularJS"
       - "C++"
   - name: "Data & AI"
     items:
