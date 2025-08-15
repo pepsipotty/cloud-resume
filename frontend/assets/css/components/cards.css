@@ -143,6 +143,10 @@
   padding: var(--spacing-lg);
   cursor: pointer;
   transition: background var(--transition-base);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .project-header:hover {

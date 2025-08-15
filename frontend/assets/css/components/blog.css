@@ -396,6 +396,11 @@
   box-shadow: var(--shadow-card);
 }
 
+.post-content img[alt="p2p-diagram"], .post-content img[alt="btc-structure-1"] {
+  background-color: bisque;
+  padding: 10px;
+}
+
 .post-content a {
   color: #00ccff;
   text-decoration: underline;
