@@ -8,6 +8,8 @@ thumbnail: "/images/blog/merkle-tree.avif"
 
 After years of reading about crypto and messing around with blockchains (and sometimes losing my head over gas fees), I finally sat down with **the** original document that started it all. What follows are my notes from the early sections of Satoshi’s whitepaper mixed with a few personal thoughts. 
 
+Many thanks to [Professor Venkatakrishnan](https://sites.google.com/site/shaileshhbv/) for taking the time to discuss this topic with me.
+
 ## Why we need a digital cash
 
 The paper starts with a problem that’s so common we barely notice it anymore: online payments rely on banks and payment processors. This works most of the time but it means transactions can be rolled back, merchants have to trust your card company to pay up, and you have to hand over extra personal info every time you buy something. With cash, you just hand it over and walk away.
