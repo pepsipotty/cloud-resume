@@ -13,7 +13,8 @@ Ever since my undergrad years, I’ve always wanted to build my own personal web
 
 This website was born out of two motivations:  
 - To finally achieve a long-standing personal goal.  
-- To supplement my cloud infrastructure journey while pursuing my AWS SAA certification.
+- To supplement my cloud infrastructure journey while pursuing my AWS SAA and Terraform certifications.
+- To complete the [Cloud Resume Challenge](https://cloudresumechallenge.dev/).
 
 ---
 
@@ -590,7 +591,7 @@ At the time of writing, this handy action has been an absolute time saver and ha
 ## Dinner is Served: What did I just make?
 From seasoning the stack, shutting the lid, and adding a cherry on top of it all, I somehow ended up with a fully functional personal website.
 
-It started as a way to learn AWS services while studying for the AWS SAA, but also as a way to follow along with Forrest Brazeal’s [Cloud Resume Challenge](https://cloudresumechallenge.dev/). Over time it grew into something more complete, with Terraform-managed infrastructure, serverless visitor tracking, a custom domain, HTTPS, and automated deployments.
+It started as a way to learn AWS services while studying for the AWS SAA and Terraform certifications, but also as a way to follow along with Forrest Brazeal’s [Cloud Resume Challenge](https://cloudresumechallenge.dev/). Over time it grew into something more complete, with Terraform-managed infrastructure, serverless visitor tracking, a custom domain, HTTPS, and automated deployments.
 
 Below is the final architecture in all its glory, illustrated with a bit more effort and care for accuracy than the quick doodles earlier in the blog:
 [![full-diagram](/images/blog/genesis-blogpost/full-diagram.avif)](/images/blog/genesis-blogpost/full-diagram.avif)
