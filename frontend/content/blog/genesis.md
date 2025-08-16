@@ -587,4 +587,12 @@ At the time of writing, this handy action has been an absolute time saver and ha
 
 ![gh-actions](/images/blog/genesis-blogpost/actions-work.png)
 
+## Dinner is Served: What did I just make?
+From seasoning the stack, shutting the lid, and adding a cherry on top of it all, I somehow ended up with a fully functional personal website.
 
+It started as a way to learn AWS services while studying for the AWS SAA, but also as a way to follow along with Forrest Brazeal’s [Cloud Resume Challenge](https://cloudresumechallenge.dev/). Over time it grew into something more complete, with Terraform-managed infrastructure, serverless visitor tracking, a custom domain, HTTPS, and automated deployments.
+
+Below is the final architecture in all its glory, illustrated with a bit more effort and care for accuracy than the quick doodles earlier in the blog:
+[![full-diagram](/images/blog/genesis-blogpost/full-diagram.avif)](/images/blog/genesis-blogpost/full-diagram.avif)
+
+Thanks for reading!
